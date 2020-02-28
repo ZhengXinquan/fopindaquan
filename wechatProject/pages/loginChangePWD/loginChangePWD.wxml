@@ -1,0 +1,21 @@
+<!--pages/loginChangePWD/loginChangePWD.wxml-->
+
+<view>
+    <!-- 厂家名称，用于展示商品  -->
+    <view class="question-title-wrap">
+      旧  密  码：<input password value='{{myInfo.user_pwd1}}' class="{{toErr=='user_pwd1'?'err':'no-err'}}" placeholder="请填写您原来的密码" maxlength="40" 
+      data-type="user_pwd1" placeholder-style="color:#b3b3b3;font-size:12px;" bindinput="handleInput"></input>
+    </view>
+    <!-- 厂家地址，用于展示商品  -->
+    <view class="question-title-wrap">
+      新  密  码：<input password value='{{myInfo.user_pwd2}}' class="{{toErr=='user_pwd2'?'err':'no-err'}}" placeholder="6-10位的字母或数字" maxlength="40" 
+      data-type="user_pwd2" placeholder-style="color:#b3b3b3;font-size:12px;" bindinput="handleInput"></input>
+    </view>
+     <!-- 厂家电话，用于展示商品  -->
+    <view class="question-title-wrap">
+      重复密码：<input password value='{{myInfo.user_pwd3}}' class="{{toErr=='user_pwd3'?'err':'no-err'}}" placeholder="请重复您的新密码" maxlength="40" 
+      data-type="user_pwd3" placeholder-style="color:#b3b3b3;font-size:12px;" bindinput="handleInput"></input>
+    </view>
+
+<button type="primary" class='button-primary'  bindtap='toUpdata'>提交修改</button>
+</view>

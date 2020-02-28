@@ -1,0 +1,120 @@
+/* pages/login/login.wxss */
+
+
+navigator {
+  margin: 25rpx 0;
+  text-align: left;
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-around;
+}
+
+navigator.item{
+  display: flex;
+  flex-flow: row wrap;
+  width: 750rpx;
+   justify-content: flex-start;
+   align-items: center;
+margin: 1rpx 0;
+height:90rpx;
+line-height:90rpx;
+background-color: #fff;
+  border-bottom: 2rpx solid #eee;
+
+}
+
+.icon {
+  display: flex;
+  width: 40rpx;
+  height: 40rpx;
+     margin-left:28rpx;
+}
+
+navigator view {
+  display: flex;
+  width: 600rpx;
+height:90rpx;
+line-height:90rpx;
+  padding-left: 30rpx;
+  font-size: 30rpx;
+  color:#333333;
+}
+navigator .right{
+    width:21rpx;
+height:32rpx;
+}
+
+.userinfo {
+  display: flex;
+  flex-flow: row wrap;
+  align-items: center;
+  justify-content:flex-start;
+  width: 750rpx;
+  height: 207rpx;
+  background: #e4393c;
+  color: #aaa;
+  /* border-top: 1rpx solid #eee; */
+  font-size: 30rpx;
+}
+
+.userinfo-tx {
+  display: flex;
+  flex-flow: column wrap;
+  align-items: flex-end;
+  justify-content: space-around;
+  width: 120rpx;
+  height: 100%;
+  margin-left: 28rpx;
+}
+
+.userinfo-text-info{
+    display: flex;
+  flex-flow: row wrap;
+  justify-content: space-around;
+  align-items: center;
+  width: 24rpx;
+  height: 100%;
+  color: #fff;
+}
+.userinfo-text-info image{
+    width:21rpx;
+height:32rpx;
+}
+.userinfo-text {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: flex-start;
+  align-items: center;
+  width: 550rpx;
+  height: 100%;
+  color: #fff;
+  align-content:center;
+}
+.userinfo-text navigator{
+  display: block;
+  margin: 10rpx 0;
+}
+.userinfo-text navigator.userinfo-text-url{
+  width: 150rpx;
+  text-align: center;
+}
+
+.userinfo-text navigator.userinfo-text-url.long{
+  width: 350rpx;
+  text-align: left;
+  padding-left: 20rpx;
+}
+
+
+.userinfo-avatar {
+  width: 114rpx;
+  height: 114rpx;
+
+  border-radius: 10rpx;
+  border: 6rpx solid #fff;
+  font-size: 30rpx;
+
+  padding:0;
+line-height:50rpx;
+
+}

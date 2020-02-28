@@ -1,0 +1,77 @@
+<!--pages/loginMyProEdit/loginMyProEdit.wxml-->
+
+<view class="question-form">
+  <!-- 问题标题  -->
+  <view class="question-title-wrap">
+    <input value='{{product.pro_name}}' class="question-title" placeholder="请输入商品名称" maxlength="40" placeholder-style="color:#b3b3b3;font-size:18px;" bindinput="handleTitleInput"></input>
+    <view class="title-input-counter">{{titleCount}}/{{titleMax}}</view>
+  </view>
+  <!-- 封面图片  -->
+  <view class="question-images-area">
+    <!-- 添加图片按钮1  -->
+    <view class="question-images-tool">
+      封面图片：
+      <button type="default" size="mini" bindtap="chooseImage" data-type="cover" wx:if="{{images.cover.length < images.coverMax}}">+ 点击添加</button>
+    </view>
+    <!-- 图片缩略图1  -->
+    <view class="question-images">
+      <block wx:for="{{images.cover}}" wx:key="*this" wx:for-index="idx">
+        <view class="q-image-wrap">
+          <image class="q-image" src="{{item}}" mode="aspectFill" data-idx="{{idx}}" data-type="cover" bindtap="handleImagePreview"></image>
+          <view class="q-image-remover" data-idx="{{idx}}" data-type="cover" bindtap="removeImage">删除</view>
+        </view>
+      </block>
+    </view>
+  </view>
+  <!-- 轮播图片  -->
+  <view class="question-images-area">
+    <!-- 添加图片按钮1  -->
+    <view class="question-images-tool">
+      轮播图片：
+      <button type="default" size="mini" bindtap="chooseImage" data-type="carousel" wx:if="{{images.carousel.length < images.carouselMax}}">+ 点击添加</button>
+    </view>
+    <!-- 图片缩略图1  -->
+    <view class="question-images">
+      <block wx:for="{{images.carousel}}" wx:key="*this" wx:for-index="idx">
+        <view class="q-image-wrap">
+          <image class="q-image" src="{{item}}" mode="aspectFill" data-idx="{{idx}}" data-type="carousel" bindtap="handleImagePreview"></image>
+          <view class="q-image-remover" data-idx="{{idx}}" data-type="carousel" bindtap="removeImage">删除</view>
+        </view>
+      </block>
+    </view>
+  </view>
+  <picker bindchange="pickChange" value="{{protypeIndex}}" range="{{protype}}" range-key="pro_type_name">
+    <view>
+      选择分类：{{protype[protypeIndex].pro_type_name}}
+    </view>
+  </picker>
+  <!-- 问题正文  -->
+  <view class="weui-cells weui-cells_after-title">
+    <view class="weui-cell">
+      <view class="weui-cell__bd">
+        <textarea  value='{{product.pro_detail_word}}' class="weui-textarea" placeholder="请输入商品详情正文内容。" maxlength="500" placeholder-style="color:#b3b3b3;font-size:14px;" style="height: 8rem" bindinput="handleContentInput" />
+        <view class="weui-textarea-counter">{{contentCount}}/500</view>
+      </view>
+    </view>
+  </view>
+  <!-- 详情图片  -->
+  <view class="question-images-area">
+    <!-- 添加图片按钮1  -->
+    <view class="question-images-tool">
+      商品详情图片：
+      <button type="default" size="mini" bindtap="chooseImage" data-type="detail" wx:if="{{images.detail.length < images.detailMax}}">+ 点击添加</button>
+    </view>
+    <!-- 图片缩略图1  -->
+    <view class="question-images">
+      <block wx:for="{{images.detail}}" wx:key="*this" wx:for-index="idx">
+        <view class="q-image-wrap">
+          <image class="q-image" src="{{item}}" mode="aspectFill" data-idx="{{idx}}" data-type="detail" bindtap="handleImagePreview"></image>
+          <view class="q-image-remover" data-idx="{{idx}}" data-type="detail" bindtap="removeImage">删除</view>
+        </view>
+      </block>
+    </view>
+  </view>
+</view>
+<view class='emptyHeight200'></view>
+  <!-- 提交表单按钮  -->
+  <button type="warn"  class="button-default" size="default" bindtap="submitForm">确认修改</button>

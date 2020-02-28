@@ -1,0 +1,31 @@
+<!--pages/loginMyInfo/loginMyInfo.wxml-->
+<view>
+    <!-- 手机号，用于登录  -->
+    <view class="question-title-wrap">
+      我的账号：<text>{{myInfo.user_account}}</text>
+    </view>
+    <!-- 厂家名称，用于展示商品  -->
+    <view class="question-title-wrap">
+      厂家名称：<input value='{{myInfo.user_name}}' class="{{toErr=='user_name'?'err':'no-err'}}" placeholder="必填，将展示在商品详情中" maxlength="40" 
+      data-type="user_name" placeholder-style="color:#b3b3b3;font-size:12px;" bindinput="handleInput"></input>
+    </view>
+    <!-- 厂家地址，用于展示商品  -->
+    <view class="question-title-wrap">
+      厂家地址：<input value='{{myInfo.user_addr}}' class="{{toErr=='user_addr'?'err':'no-err'}}" placeholder="必填，将展示在商品详情中" maxlength="40" 
+      data-type="user_addr" placeholder-style="color:#b3b3b3;font-size:12px;" bindinput="handleInput"></input>
+    </view>
+     <!-- 厂家电话，用于展示商品  -->
+    <view class="question-title-wrap">
+      联系电话：<input value='{{myInfo.user_phone}}' class="{{toErr=='user_phone'?'err':'no-err'}}" placeholder="必填，将展示在商品详情中" maxlength="40" 
+      data-type="user_phone" placeholder-style="color:#b3b3b3;font-size:12px;" bindinput="handleInput"></input>
+    </view>
+    <view class="question-title-wrap">
+      注册时间：<text>{{myInfo.user_create_time}}</text>
+    </view>
+      <view class="question-title-wrap">
+      到期时间：<text>{{myInfo.user_end_time}}</text>
+    </view>
+
+<button type="primary" class='button-primary' bindtap='toUpdata'>提交修改</button>
+<button type="warn" class='button-primary button-out' bindtap='toLoginOut'>安全退出</button>
+</view>

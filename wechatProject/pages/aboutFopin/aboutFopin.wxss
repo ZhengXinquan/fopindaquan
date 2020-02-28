@@ -1,0 +1,13 @@
+/* pages/aboutFopin/aboutFopin.wxss */
+@import "../../wxParse/wxParse.wxss";
+text{
+  display: block;
+  width:700rpx;
+  text-align: center;
+  margin: 25rpx;
+}
+
+page{
+  padding:0 10rpx;
+  box-sizing: border-box;
+}

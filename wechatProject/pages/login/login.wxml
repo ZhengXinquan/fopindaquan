@@ -1,0 +1,79 @@
+<!--pages/login/login.wxml-->
+<view class="container">
+
+  <view class="userinfo">
+    <view class="userinfo-tx">
+      <button wx:if="{{!hasUserInfo && canIUse}}" class="userinfo-avatar" open-type="getUserInfo" bindgetuserinfo="getUserInfo"> 获取头像昵称 </button>
+      <block wx:else>
+        <image class="userinfo-avatar" src="{{userInfo.avatarUrl}}" mode="cover"></image>
+      </block>
+    </view>
+
+    <view wx:if="{{!isLogin}}" class='userinfo-text'>
+      <navigator class='userinfo-text-url' url="../toLogin/toLogin" open-type="navigate">登录</navigator>
+      <navigator open-type="navigate">|</navigator>
+      <navigator class='userinfo-text-url' url="../toReg/toReg" open-type="navigate">注册</navigator>
+    </view>
+    <view wx:if="{{isLogin}}" class='userinfo-text' bindtap="toMyInfo">
+      <navigator url="../loginMyInfo/loginMyInfo"  class='userinfo-text-url long' open-type="navigate">{{userInfo.user_name}}</navigator>
+      <navigator url="../loginMyInfo/loginMyInfo"  class='userinfo-text-url long' open-type="navigate">{{userInfo.user_mark1}}</navigator>
+      <!-- <navigator 
+      class='userinfo-text-url long' 
+      url="../loginChangePWD/loginChangePWD" 
+      open-type="navigate">修改密码</navigator> -->
+    </view>
+    <view wx:if="{{isLogin}}" class='userinfo-text-info' bindtap="toMyInfo">
+      <navigator url="../loginMyInfo/loginMyInfo" open-type="navigate">
+        <image src="/images/right-white.png"></image>
+      </navigator>
+    </view>
+  </view>
+
+  <!-- <navigator wx:if="{{!isLogin}}" url="../toLogin/toLogin" open-type="navigate" class="item">
+   <image src="/images/my-pro.png" class="icon "></image>
+    <view class="h2">发布产品</view>
+    <image class="right" src="/images/right.png"></image>
+  </navigator>
+  <navigator wx:if="{{isLogin}}" url="../productPublish/productPublish" open-type="navigate" class="item">
+   <image src="/images/my-pro.png" class="icon "></image>
+    <view class="h2">发布产品</view>
+   <image class="right" src="/images/right.png"></image>
+  </navigator> -->
+
+  <navigator wx:if="{{!isLogin}}" url="../toLogin/toLogin" open-type="navigate" class="item">
+    <image src="/images/my-pro.png" class="icon "></image>
+    <view class="h2">产品管理</view>
+    <image class="right" src="/images/right.png"></image>
+  </navigator>
+  <navigator wx:if="{{isLogin}}" url="../loginMyPro/loginMyPro" open-type="navigate" class="item">
+    <image src="/images/my-pro.png" class="icon "></image>
+    <view class="h2">产品管理</view>
+    <image class="right" src="/images/right.png"></image>
+  </navigator>
+
+  <navigator wx:if="{{isLogin}}" url="../loginChangePWD/loginChangePWD" open-type="navigate" class="item">
+    <image src="/images/my-pwd.png" class="icon "></image>
+    <view class="h2">修改密码</view>
+    <image class="right" src="/images/right.png"></image>
+  </navigator>
+
+
+  <navigator wx:if="{{!isLogin}}" url="../toForget/toForget" open-type="navigate" class="item">
+    <image src="/images/my-pwd.png" class="icon "></image>
+    <view class="h2">忘记密码</view>
+    <image class="right" src="/images/right.png"></image>
+  </navigator>
+
+
+  <navigator url="../aboutAdd/aboutAdd" open-type="navigate" class="item">
+    <image src="/images/my-add.png" class="icon "></image>
+    <view class="h2">加盟入驻</view>
+    <image class="right" src="/images/right.png"></image>
+  </navigator>
+  <navigator url="../aboutFopin/aboutFopin" open-type="navigate" class="item">
+    <image src="/images/my-about.png" class="icon "></image>
+    <view class="h2">关于平台</view>
+    <image class="right" src="/images/right.png"></image>
+  </navigator>
+
+</view>

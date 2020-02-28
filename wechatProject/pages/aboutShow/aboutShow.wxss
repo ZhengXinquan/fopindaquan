@@ -1,0 +1,27 @@
+/* pages/aboutShow/aboutShow.wxss */
+
+
+text{
+  display: block;
+  width:700rpx;
+  text-align: center;
+  margin-top:  25rpx;
+}
+.coverimg{
+  height: 350rpx;
+  width: 750rpx;
+}
+.title{
+    width:730rpx;
+  text-align: left;
+  margin-top: 8rpx;
+  margin-left:10rpx;
+  font-size: 12px;
+}.time{
+    width:730rpx;
+  text-align: left;
+    margin-top: 2rpx;
+    margin-bottom: 16rpx;
+    margin-left:10rpx;
+  font-size: 10px;
+}

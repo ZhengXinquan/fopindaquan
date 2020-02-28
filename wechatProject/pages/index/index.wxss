@@ -1,0 +1,98 @@
+/**index.wxss**/
+
+
+.menu{
+  width:100%;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-around;
+  padding: 20rpx 0;
+  background: white;
+}
+.menu-nav{
+  display: flex;
+  width: 150rpx;
+  height: 170rpx;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+}
+.menu-img{
+  display: flex;
+  width: 100rpx;
+  height: 100rpx;
+  border-radius: 50%;
+  margin: 10rpx 25rpx;
+}
+.menu-text{
+  color: #333333;
+  width: 150rpx;
+  height: 50rpx;
+  font-size: 30rpx;
+  /* background-color: red; */
+  text-align: center;
+}
+
+.info-title{
+display: block;
+text-align: center;
+width:750rpx;
+margin-top: 30rpx;
+margin-bottom: 20rpx;
+}
+.info-box{
+  width:750rpx;
+  display: flex;
+  flex-flow:row wrap;
+  align-items: center;
+  justify-content: flex-start;
+  /* background: white; */
+}
+.info-item{
+  display: flex;
+  width: 234rpx;
+  height: 304rpx;
+  flex-flow:column wrap;
+  align-items: center;
+  justify-content: space-around;
+  margin: 12rpx 0;
+  margin-left: 12rpx;
+  background: white; 
+}
+.info-img{
+ display: flex;
+  width: 234rpx;
+  height: 235rpx;
+}
+.info-text{
+  color: #333;
+  width: 234rpx;
+  height: 69rpx;
+  line-height: 69rpx;
+  text-align: left;
+    padding-left: 12rpx;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow:ellipsis;
+  font-size: 25rpx;
+}
+/* 
+.userinfo {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.userinfo-avatar {
+  width: 128rpx;
+  height: 128rpx;
+  margin: 20rpx;
+  border-radius: 50%;
+}
+.userinfo-nickname {
+  color: #aaa;
+}
+.usermotto {
+  margin-top: 200px;
+} */
+

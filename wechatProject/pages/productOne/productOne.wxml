@@ -1,0 +1,43 @@
+<!--pages/productOne/productOne.wxml-->
+<swiper class='u-wrp-bnr' indicator-dots='true' autoplay='true' interval='5000' duration='1000' circular='true'>
+  <block wx:for="{{pro_img_carousel}}" wx:key='productpro_img_carouselindex'>
+    <swiper-item>
+      <image wx:if="{{item.length>4}}" src='{{item}}' class='u-img-slide' mode='aspectFill'></image>
+    </swiper-item>
+  </block>
+</swiper>
+<view class='pro-info'>
+
+
+  <text class='pro-info-title bottomBig'>{{product.pro_name}}</text>
+  <text class='pro-info-username iconbbb'>{{product.user_name}}-{{product.pro_type_name}}</text>
+    <text class='iconbbb iconbbb-addr'>{{product.user_addr}}</text>
+  <text class='iconbbb iconbbb-call bottomBig' bindlongtap='makePhoneCall'>{{product.user_phone}}</text>
+
+  <text wx:if="{{product.pro_detail_word!=''&&product.pro_detail_word!='isNull'}}" class='pro-info-detail'>详情介绍</text>
+  <text wx:if="{{product.pro_detail_word!=''&&product.pro_detail_word!='isNull'}}" class='pro-info-detail-content'>{{product.pro_detail_word}}</text>
+
+  <text wx:if="{{pro_detail_imgs.length>0}}" class='pro-info-detail'>详情图片</text>
+  <!-- 图片缩略图1  -->
+  <view wx:if="{{pro_detail_imgs.length>0}}" class="question-images">
+    <block wx:for="{{pro_detail_imgs}}" wx:key='productpro_detail_imgsindex' wx:for-index="idx">
+      <view class="q-image-wrap">
+        <image class="q-image" wx:if="{{item.length>4}}" src="{{item}}" mode="widthFix" data-idx="{{idx}}" bindtap="handleImagePreview"></image>
+      </view>
+    </block>
+  </view>
+</view>
+<view class='emptyHeight200'></view>
+<view class='btns'>
+<button
+class='share'
+  open-type="share"
+>分享
+</button>
+<button
+class='makePhoneCall'
+  bindtap='makePhoneCall'
+>联系厂家
+</button>
+
+</view>

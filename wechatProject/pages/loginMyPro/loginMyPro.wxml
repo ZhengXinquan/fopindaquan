@@ -1,0 +1,17 @@
+<!--pages/loginMyPro/loginMyPro.wxml-->
+<view class='list-box'>
+  <text class="tips" wx:if="{{myPro.length==0}}">未获取到产品信息</text>
+  <view wx:for="{{myPro}}" class='list-box-item' wx:key="pl">
+    <view class='row r2'>
+      <text class="title" bindtap='toDetailByID'  data-did="{{item.id}}">{{item.pro_name}}</text>
+      <text bindtap='toEditByID'  data-did="{{item.id}}"  class="call green">编辑</text>
+    </view>
+    <view class='row r2'>
+      <text class="time" bindtap='toDetailByID'  data-did="{{item.id}}">发布时间：{{item.pro_upload_time}}</text>
+      <text bindtap='toDeleteByID'  data-did="{{item.id}}"  class="call">删除</text>
+    </view>
+  </view>
+
+</view>
+<button type="warn"  class="button-default" size="default" bindtap='toPublish'>发布产品
+</button>

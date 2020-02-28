@@ -1,0 +1,63 @@
+{
+  "pages": [
+    "pages/index/index",
+    "pages/product/product",
+    "pages/productOne/productOne",
+    "pages/productPublish/productPublish",
+    "pages/want/want",
+    "pages/wantOne/wantOne",
+    "pages/wantPublish/wantPublish",
+    "pages/login/login",
+    "pages/loginMyInfo/loginMyInfo",
+    "pages/loginChangePWD/loginChangePWD",
+    "pages/loginMyPro/loginMyPro",
+    "pages/loginMyProEdit/loginMyProEdit",
+    "pages/toLogin/toLogin",
+    "pages/toReg/toReg",
+    "pages/toForget/toForget",
+    "pages/aboutShow/aboutShow",
+    "pages/aboutShowOne/aboutShowOne",
+    "pages/aboutAdd/aboutAdd",
+    "pages/aboutFopin/aboutFopin",
+    "pages/upload/upload",
+    "pages/logs/logs"
+  ],
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#e4393c",
+    "navigationBarTitleText": "佛品大全",
+    "navigationBarTextStyle": "white"
+  },
+  "tabBar": {
+    "color": "#a9b7b7",
+    "selectedColor": "#e4393c",
+    "borderStyle": "black",
+    "list": [
+      {
+           "selectedIconPath": "images/icon-red-home.png",
+            "iconPath": "images/icon-black-home.png",
+        "pagePath": "pages/index/index",
+        "text": "首页"
+      },
+      {
+        "selectedIconPath": "images/icon-red-pro.png",
+        "iconPath": "images/icon-black-pro.png",
+        "pagePath": "pages/product/product",
+        "text": "产品"
+      },
+      {
+        "selectedIconPath": "images/icon-red-want.png",
+        "iconPath": "images/icon-black-want.png",
+        "pagePath": "pages/want/want",
+        "text": "求购"
+      },
+      {
+        "selectedIconPath": "images/icon-red-user.png",
+        "iconPath": "images/icon-black-user.png",
+        "pagePath": "pages/login/login",
+        "text": "我的"
+      }
+    ]
+  },
+  "sitemapLocation": "sitemap.json"
+}

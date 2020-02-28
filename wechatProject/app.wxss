@@ -1,0 +1,136 @@
+/**app.wxss 屏幕宽为750rpx **/
+page{
+    background-color:#ededed;
+}
+.container {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  /* padding: 200rpx 0; */
+  box-sizing: border-box;
+  background-color:#ededed;
+} 
+
+.u-wrp-bnr {
+  width: 100%;
+  display: block;
+  position: relative;
+  background: #f0f0f0;
+  height: 480rpx;
+}
+.u-img-slide {
+  width: 100%;
+  height: inherit;
+}
+
+
+
+.search-box{
+  width:730rpx;
+    margin: 10rpx;
+   display: flex;
+  flex-direction: row;
+  justify-content:space-between;
+  align-items: center;
+  height:80rpx;
+  background-color:#fff;
+  border:1rpx solid #f3f4f6;
+  border-radius: 5rpx;
+
+  margin-top:0;
+border-top:solid 10rpx #ededed;
+
+}
+/* 搜索框提示文字样式 */
+.search-box input
+{
+   width:600rpx;
+  font-size:27rpx;
+  font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  padding-left:30rpx; 
+
+}
+.phcolor{
+  color:#999999;
+  font-size: 25rpx;
+}
+
+/* 搜索框小图标 */
+.search-box image
+{ 
+  width:80rpx;
+  height:80rpx;
+  padding-right:0rpx;
+}
+
+
+.publish-area{
+  height: 150rpx; width: 150rpx; 
+  position: fixed;
+  bottom: 0;
+  right: 0;
+  z-index:1;
+
+}
+.publish{
+  width: 80rpx;
+  height: 80rpx;
+    line-height: 80rpx;
+    font-size: 30rpx;
+  border-radius: 50%;
+  background-color: #e4393c;
+  color:white;
+  text-align: center;
+}
+
+
+.button-default{
+  position: fixed;
+  width:694rpx;
+  height: 83rpx;
+  line-height: 83rpx;
+  bottom: 30rpx;
+  margin-left: 28rpx;
+  font-size: 32rpx;
+  background-color: #e4393c;
+color: #fff;
+}
+
+.button-primary{
+  position:relative;
+  width:694rpx;
+  height: 83rpx;
+  line-height: 83rpx;
+
+  margin-left: 28rpx;
+  font-size: 32rpx;
+
+}
+
+.phcolor30{
+  color:#999999;
+  font-size: 30rpx;
+}
+.emptyHeight200{
+  display: block;
+  height: 200rpx;
+  width: 100%;
+}
+
+
+.item_fix{
+  position: fixed;
+  width:100%;
+  margin: 0;
+}
+.item_hide{
+  display: none;
+}
+
+
+.question-images {
+  display: flex;
+  flex-flow:row wrap;
+}

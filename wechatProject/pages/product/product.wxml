@@ -1,0 +1,34 @@
+<!--pages/product/product.wxml-->
+<view class="container">
+
+
+<movable-area class="publish-area">
+    <movable-view
+       class='publish'
+        bindtap="publishProduct" 
+      direction="all"
+    >发布</movable-view>
+  </movable-area>
+
+  <view class='search-box item_fix'>
+    <input type='text' placeholder='搜索商品' placeholder-class="phcolor" confirm-type='search' value="{{inputValue}}" bindinput='inputBind' bindconfirm='query'></input>
+    <image class="" src='/images/icon_search.png' bindtap='query'></image>
+  </view>
+    <view class='search-box '>
+    </view>
+  <scroll-view scroll-y style="height:{{scrollHeight}}rpx" class='type-box'>
+    <text wx:for="{{protype}}" wx:key="protypeindex" bindtap="getProductByTypeID" data-typeid="{{item.id}}" class="{{protypeactive==item.id?'active type-box-item':'type-box-item'}}">{{item.pro_type_name}}</text>
+  </scroll-view>
+
+  <scroll-view scroll-y style="height:{{scrollHeight}}rpx" scroll-with-animation	 scroll-top="{{scrollTop}}" class='list-box' >
+
+  <view class='list-box-scroll'>
+    <text class="tips" wx:if="{{prolist.length==0}}">未搜索到相关商品</text>
+    <view wx:for="{{prolist}}" class='list-box-item' wx:key="pl" bindtap="toProductById" data-proid="{{item.id}}" >
+      <image class='list-box-item-img' src="{{item.pro_img_cover}}" mode="cover"></image>
+      <text class="list-box-item-text">{{item.pro_name}}</text>
+    </view>
+
+  </view>
+  </scroll-view>
+</view>

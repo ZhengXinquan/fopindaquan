@@ -1,0 +1,36 @@
+<!--index.wxml-->
+<view class="container">
+  <swiper id="swiper" class='u-wrp-bnr' indicator-dots='true' autoplay='true' interval='5000' duration='1000' circular='true'>
+    <block wx:for="{{bnrUrl}}" wx:key="index">
+      <swiper-item bindtap='toClickSwiper' data-prourl="{{item.carousel_mark1}}" >
+        <image src='{{item.carousel_img}}' class='u-img-slide' mode='aspectFill'></image>
+      </swiper-item>
+    </block>
+  </swiper>
+
+  <view class='search-box {{curClass?"item_fix":""}}'>
+    <input type='text' placeholder='搜索商品' placeholder-class="phcolor" confirm-type='search' value="{{inputValue}}" bindinput='inputBind' bindconfirm='query'></input>
+    <image class="" src='/images/icon_search.png' bindtap='query'></image>
+  </view>
+<view class='search-box {{curClass?"":"item_hide"}}'></view>
+  <view class="menu">
+    <navigator class='menu-nav' wx:for="{{indexMenu}}" wx:key="indexMnu_index" url='{{item.url}}' open-type="{{item.openType}}">
+      <image class='menu-img' src="{{item.src}}" mode="cover"></image>
+      <text class="menu-text">{{item.text}}</text>
+    </navigator>
+  </view>
+
+  <view wx:for="{{productsType}}" wx:key="proid" wx:for-item="productsTypeItem">
+    <text wx:if="{{productsTypeItem.products.length>0}}" class="info-title">{{productsTypeItem.title}}</text>
+    <view class="info-box">
+      <view wx:for="{{productsTypeItem.products}}" bindtap="toProductById" data-proid="{{item.id}}" class='info-item' wx:key="pi1">
+        <image class='info-img' src="{{item.pro_img_cover}}" mode="aspectFill"></image>
+        <text class="info-text">{{item.pro_name}}</text>
+      </view>
+    </view>
+  </view>
+
+
+
+
+</view>

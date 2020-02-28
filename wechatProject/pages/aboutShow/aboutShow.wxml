@@ -1,0 +1,12 @@
+<!--pages/aboutShow/aboutShow.wxml-->
+
+<text wx:if="{{articles.lenght<=0}}">暂无佛品展会相关信息</text>
+<view wx:else>
+
+<view wx:for="{{articles}}" wx:key="i" bindtap='toDetailByID' data-did="{{item.id}}" >
+<image class='coverimg' src="{{item.article_cover_img}}"></image>
+<text class='title'>{{item.article_title}}</text>
+<text class='time'>时间：{{item.article_create_time}}</text>
+</view>
+
+</view>

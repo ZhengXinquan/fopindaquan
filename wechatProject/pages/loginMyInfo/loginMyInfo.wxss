@@ -1,0 +1,35 @@
+/* pages/loginMyInfo/loginMyInfo.wxss */
+page{
+  background-color: #fff;
+}
+.question-title-wrap{
+    display: flex;
+  align-items: center;
+  border-bottom: 2rpx solid #ededed;
+  margin: 0 28rpx;
+  font-size: 30rpx;
+  height: 126rpx;
+  line-height: 126rpx;
+  color: #333333;
+}
+.question-title-wrap input,text{
+  font-size: 30rpx;
+  width:500rpx;
+    height: 126rpx;
+  line-height: 126rpx;
+  display: block;
+   color: #999999;
+}
+.no-err{
+  color: #1aad19!important;
+}
+.err{
+  color: #f66!important;
+}
+
+button{
+  margin-top:100rpx;
+}
+button.button-out{
+    margin-top:30rpx;
+}
